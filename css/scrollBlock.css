@@ -144,6 +144,7 @@
         background-color: var(--background-70);
         padding: 8px;
         border-radius: 32px 32px 0 0;
+        transition: bottom 0.3s ease-in-out 0.23s;
     }
     .total-price-fixed._header-scroll {
         transition: bottom 0.3s ease-in-out 0.23s;
@@ -154,8 +155,11 @@
         bottom: 80px;
     }
     .total-price-fixed._header-scroll.visible {
-        transition: bottom 0.4s ease;
+        transition: bottom 0.4s ease-in-out 0.23s;
         bottom: -100%;
+    }
+    .header {
+        transition: bottom 0.3s ease-in-out 0.3s;
     }
     .header._header-scroll {
         transition: bottom 0.3s ease-in-out 0.3s;
