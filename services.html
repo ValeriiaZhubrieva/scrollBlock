@@ -155,7 +155,7 @@
 		</header>
 		<main class="page">
 			<div class="top">
-				<div class="top-nav">
+				<div class="top-nav top-nav--absolute-mob">
 					<div class="top-nav__container">
 						<div class="top-nav__games games-menu">
 							<button class="games-menu__current button-gradient" type="button">
@@ -680,7 +680,7 @@
 									</div>
 									<div class="calc-services__checkboxes">
 										<label class="checkbox-calc">
-											<input class="checkbox-calc__input" type="checkbox" value="1" name="">
+											<input class="checkbox-calc__input" type="checkbox" data-price="239" value="1" name="">
 											<span class="checkbox-calc__label">
 												<span class="checkbox-calc__fake"></span>
 												<span class="checkbox-calc__body">
@@ -694,7 +694,7 @@
 											</span>
 										</label>
 										<label class="checkbox-calc">
-											<input class="checkbox-calc__input" type="checkbox" value="2" name="">
+											<input class="checkbox-calc__input" type="checkbox" data-price="487" value="2" name="">
 											<span class="checkbox-calc__label">
 												<span class="checkbox-calc__fake"></span>
 												<span class="checkbox-calc__body">
@@ -713,7 +713,7 @@
 											</span>
 										</label>
 										<label class="checkbox-calc">
-											<input class="checkbox-calc__input" type="checkbox" value="3" name="">
+											<input class="checkbox-calc__input" type="checkbox" data-price="120" value="3" name="">
 											<span class="checkbox-calc__label">
 												<span class="checkbox-calc__fake"></span>
 												<span class="checkbox-calc__body">
@@ -732,7 +732,7 @@
 											</span>
 										</label>
 										<label class="checkbox-calc">
-											<input class="checkbox-calc__input" type="checkbox" value="4" name="">
+											<input class="checkbox-calc__input" type="checkbox" data-price="230" value="4" name="">
 											<span class="checkbox-calc__label">
 												<span class="checkbox-calc__fake"></span>
 												<span class="checkbox-calc__body">
@@ -746,7 +746,7 @@
 											</span>
 										</label>
 										<label class="checkbox-calc">
-											<input class="checkbox-calc__input" type="checkbox" value="5" name="">
+											<input class="checkbox-calc__input" type="checkbox" data-price="2300" value="5" name="">
 											<span class="checkbox-calc__label">
 												<span class="checkbox-calc__fake"></span>
 												<span class="checkbox-calc__body">
@@ -1475,14 +1475,11 @@
 					<div class="total-price-fixed__rank-name">
 						Синій
 					</div>
-					<div class="total-price-fixed__rank-value">
-						7312 ELO
-					</div>
 				</div>
 			</div>
 			<div class="total-price-fixed__divider">
 				<svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M8.86328 4.94433C9.29254 5.19216 9.29253 5.81173 8.86328 6.05956L1.69183 10.2C1.17253 10.4998 0.561376 9.98943 0.763818 9.42501L2.09293 5.71933C2.14334 5.57879 2.14334 5.4251 2.09293 5.28457L0.763819 1.57889C0.561376 1.01447 1.17253 0.504076 1.69183 0.803894L8.86328 4.94433Z" fill="white" />
+					<path d="M8.86328 4.94433C9.29254 5.19216 9.29253 5.81173 8.86328 6.05956L1.69183 10.2C1.17253 10.4998 0.561376 9.98943 0.763818 9.42501L2.09293 5.71933C2.14334 5.57879 2.14334 5.4251 2.09293 5.28457L0.763819 1.57889C0.561376 1.01447 1.17253 0.504076 1.69183 0.803894L8.86328 4.94433Z" fill="#3c3c3c" />
 				</svg>
 			</div>
 			<div class="total-price-fixed__rank">
@@ -1490,9 +1487,6 @@
 				<div class="total-price-fixed__rank-info">
 					<div class="total-price-fixed__rank-name">
 						Золотий
-					</div>
-					<div class="total-price-fixed__rank-value">
-						27890 ELO
 					</div>
 				</div>
 			</div>
@@ -1507,7 +1501,7 @@
 					1354 грн
 				</div>
 				<div class="total-price-fixed__price">
-					996 грн
+					<span class="animated-number">996</span> грн
 				</div>
 			</div>
 		</div>

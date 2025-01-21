@@ -35,6 +35,7 @@ setTimeout(() => {
         });
     }
 }, 0);
+//====================================================================================================
 document.addEventListener("DOMContentLoaded", () => {
     const totalElement = document.querySelector(".calc-aside__total");
     const fixedElement = document.querySelector(".total-price-fixed");
@@ -52,3 +53,47 @@ document.addEventListener("DOMContentLoaded", () => {
     );
     observer.observe(totalElement);
 });
+//====================================================================================================
+document.addEventListener("DOMContentLoaded", () => {
+    const totalPriceElement = document.querySelector(".animated-number");
+    let totalPrice = 0; // Начальная цена
+
+    // Функция анимации изменения числа
+    const watchAndAnimateNumber = (element, from, to, duration = 500) => {
+        let startTime = null;
+
+        const step = (currentTime) => {
+            if (!startTime) startTime = currentTime;
+            const progress = Math.min((currentTime - startTime) / duration, 1);
+            const currentValue = Math.floor(from + (to - from) * progress);
+            element.textContent = currentValue;
+
+            if (progress < 1) {
+                requestAnimationFrame(step);
+            }
+        };
+
+        requestAnimationFrame(step);
+    };
+
+    // Обработчик кликов на checkbox
+    const handleCheckboxClick = (event) => {
+        const checkbox = event.target;
+        const price = parseFloat(checkbox.dataset.price) || 0;
+
+        if (price) {
+            const previousPrice = totalPrice;
+            totalPrice += price;
+            watchAndAnimateNumber(totalPriceElement, previousPrice, totalPrice);
+        }
+    };
+
+    // Находим все чекбоксы
+    const checkboxes = document.querySelectorAll(".checkbox-calc__input");
+    checkboxes.forEach((checkbox) => {
+        checkbox.addEventListener("click", handleCheckboxClick);
+    });
+});
+
+//====================================================================================================
+
